@@ -1,0 +1,95 @@
+body {
+	font-family:  "Trebuchet MS", Helvetica, sans-serif;
+	/*background-position: center top;
+	text-align: center;
+	background-color: rgb(53,53,53);
+	color: white;*/
+}
+h1 {
+	font-family:  "Trebuchet MS", Helvetica, sans-serif;
+}
+p {
+	line-height: 1.5;
+}
+
+
+.menu {
+	height: 40px;
+	background-color: #7CBF9E;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+	margin-bottom: 10px;
+}
+.title1  {
+	font-size: 20px;
+	text-align: left;
+	padding: 10px;
+}
+.name {
+	margin: 10px 0;
+	text-align: right;
+}
+.logout {
+	margin: 10px 0;
+	text-align: left;
+}
+
+
+.email_header{
+	padding-top:10px;
+	padding-right:10px;
+	text-align: right;
+}
+
+.email_footer p{
+	line-height: 1.0;
+	text-align: center;
+	padding-bottom: 50px;
+	font-size: 12px;
+	margin:0;
+}
+
+
+.loading_div {
+	padding:250px;
+}
+.div_height {
+	padding: 70px 0;
+}
+.bg_blue {
+	background-color: rgb(97,143,252);
+}
+.bg_green {
+	background-color: #7CBF9E;
+}
+.bg_red {
+	background-color: #6E2525;
+}
+.bg_dark {
+	background-color: rgb(53,53,53);
+}
+.bg_white {
+	background-color: white;
+	color: rgb(53,53,53);
+}
+
+
+.start_page {
+	padding-top: 50px;
+}
+
+.stress {
+	color:black;
+	font-weight:bold;
+}
+
+.empty_line {
+	height: 40px;
+	margin:0;
+	padding:0;
+}
+
+#frieds_top_list img {
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
