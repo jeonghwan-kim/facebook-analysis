@@ -1,11 +1,14 @@
 facebook-analysis
 =================
 
-사전준비 사항
+### Example
 
-1. facebook 폴더에 key-info.php 파일 생성
+http://54.250.223.230/facebook-analysis
 
-2. key-info.php 에 다음과 같이 입력
+### 사전준비 사항
+
+* facebook 폴더에 key-info.php 파일 생성
+* key-info.php 에 다음과 같이 입력
 
 ```php
 <?php
