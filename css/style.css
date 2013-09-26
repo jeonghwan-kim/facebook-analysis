@@ -23,7 +23,8 @@ p {
 .title1  {
 	font-size: 20px;
 	text-align: left;
-	padding: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 .name {
 	margin: 10px 0;

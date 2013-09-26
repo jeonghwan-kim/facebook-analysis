@@ -15,7 +15,6 @@ require '../facebook/facebook.php';
 require '../facebook/key-info.php';
 session_start();
 
-
 // facebook 객체 생성
 $facebook = new Facebook(array('appId'  => $appId,'secret' => $secret));
 
