@@ -2,7 +2,7 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="user-scalable=no, width=device-width" />
+      <metaname="viewport"content="width=device-width, initial-scale=1.0">
 
     <title>분석결과</title>
 
@@ -17,10 +17,22 @@
           padding-top: 60px;
         }
       }
+      @media (max-width: 979px) {
+        .navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
+          padding: 0px;
+        }
+      }
       @media (max-width: 767px) {
-        .name, .logout {
-          width: 100%;
-          text-align: left;
+        .user-info {
+          float:left;
+        }
+        body {
+          padding-left:5px;
+          padding-right:5px;
+        }
+        .navbar-fixed-top {
+          margin-left: 0;
+          margin-right: 0;  
         }
       }
     </style>
@@ -29,7 +41,6 @@
   <body>
 
     <!-- 메뉴바 -->
-    <!-- <div class="menu navbar navbar-fixed-top"> -->
     <div class=" navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -37,11 +48,11 @@
             <div class="span9 title">
               <div class="title1">Facebook 분석기</div>
             </div>
-            <div class="span2">
-              <div id="user_name" class="name"></div>
-            </div>
-            <div class="span1">
-              <div id="logout_url" class="logout"></div>
+            <div class="span3">
+              <div class="user-info">
+                <span id="user_name" ></span>
+                <span id="logout_url" ></span>
+              </div>
             </div>
           </div>
         </div>
@@ -51,35 +62,35 @@
     <!-- 결과화면 -->
     <div class="container-fluid">
       <div class="row-fluid">
-        <div id="word_cloud_outer" class="span6 well">
-          <h3>키워드</h3>
-          <p>페이스북 게시물에서 자주 사용하는 단어를 분석합니다.</p>
-          <img src="loading.gif" />
-          <div id="word_cloud"></div>
+        <div id="word_cloud_outer" class="span6 the-box">
+          <div class="subtitle">키워드</div>
+          <p class="descrip lead">페이스북 게시물에서 자주 사용하는 단어를 분석합니다.</p>
+          <div class="loading-img"><img src="loading.gif" /></div>
+          <div class="result"><div id="word_cloud"></div></div>
         </div>
 
         <!-- <div id="time_analysis" class="span6 bg_white div_height"> -->
-        <div id="time_analysis" class="span6 well">
-          <h3>사용 시간대</h3>
-          <p>페이스북에 게시물의 시간을 분석합니다.</p>
-          <img src="loading.gif" />
-          <div id="chart_time" class="google_chart" ></div>
+        <div id="time_analysis" class="span6 the-box">
+          <div class="subtitle">사용 시간대</div>
+          <p class="descrip lead">페이스북에 게시물의 시간을 분석합니다.</p>
+          <div class="loading-img"><img src="loading.gif" /></div>
+          <div class="result"><div id="chart_time" class="google_chart" ></div></div>
         </div>
       </div> <!-- row -->
 
       <div class="row-fluid">
-        <div id="frieds_activity" class="span6 well">
-          <h3>친구관계</h3>
-          <p>내 게시글을 좋아하거나 댓글을 남긴 친구들을 분석합니다.</p>
-          <img src="loading.gif" />
-          <div id="chart_close" ></div>
+        <div id="frieds_activity" class="span6 the-box">
+          <div class="subtitle">친구관계</div>
+          <p class="descrip lead">내 게시글을 좋아하거나 댓글을 남긴 친구들을 분석합니다.</p>
+          <div class="loading-img"><img src="loading.gif" /></div>
+          <div class="result"><div id="chart_close" ></div></div>
         </div>
 
-        <div id="frieds_top_list" class="span6 well">
-          <h3>친한 친구</h3>
-          <p>내게 가장 관심 많은 친구를 분석합니다.</p>
-          <img src="loading.gif" />
-          <div id="foo" ></div>
+        <div id="frieds_top_list" class="span6 the-box">
+          <div class="subtitle">친한 친구</div>
+          <p class="descrip lead">내게 가장 관심 많은 친구를 분석합니다.</p>
+          <div class="loading-img"><img src="loading.gif" /></div>
+          <div class="result"><div id="friend-photos" ></div></div>
         </div>
       </div>
 

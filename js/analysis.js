@@ -60,7 +60,7 @@ function show_title(data)
 
 function show_word_cloud(none_arr, post_num, text_len, elapsed_time) 
 {
-	$("#word_cloud_outer img").fadeOut();
+	$("#word_cloud_outer .loading-img").remove();
 	$("#word_cloud").css("height", 400);
 
 	var word_array = Array();
@@ -83,7 +83,7 @@ function show_word_cloud(none_arr, post_num, text_len, elapsed_time)
  * 
  */
 function draw_chart_time(chart_div, arr, elapsed_time) {
-	$("#time_analysis img").fadeOut();
+	$("#time_analysis .loading-img").remove();
 	$("#time_analysis p").text("총 " + arr.length +
 		"개 게시글의 게시시간을 분석한 결과입니다. (분석시간: " + elapsed_time + "초)");
 
@@ -123,7 +123,7 @@ function draw_chart_time(chart_div, arr, elapsed_time) {
 		      minValue: new Date(0,0,0,0,0,0),
 		      maxValue:new Date(0,0,0,23,59,59)},
 		hAxis: {title: ""},
-		backgroundColor: 'white',
+		backgroundColor: 'transparent',
 		colors:['#F2685E'],
 		legend: 'none'
 	};
@@ -136,7 +136,7 @@ function draw_chart_time(chart_div, arr, elapsed_time) {
 
 
 function draw_chart_close(chart_div, arr, num, elapsed_time) {
-	$("#frieds_activity img").fadeOut();
+	$("#frieds_activity .loading-img").remove();
 	$("#frieds_activity p").text("내 게시글에 댓글이나 좋아요를 남긴 " + num + 
 		"명의 친구들을 분석한 결과입니다.(분석시간: " + elapsed_time+ "초)");
 
@@ -160,7 +160,7 @@ function draw_chart_close(chart_div, arr, num, elapsed_time) {
 		// hAxis: {title: '댓글수', interval:1, format:'#', viewWindow:{min:0, max:2}},		
 		// vAxis: {title: '좋아요 갯수', interval:1, format:'##', viewWindow:{min:0, max:2}},		
 		bubble: {textStyle: {fontSize: 11}},
-		backgroundColor: '#ffffff',
+		backgroundColor: 'transparent',
 		colors:['#618FFC'],
 		// legend: 'none'
 		};
@@ -172,7 +172,7 @@ function draw_chart_close(chart_div, arr, num, elapsed_time) {
 
 function show_top_friends(arr, num, elapsed_time)
 {
-	$("#frieds_top_list img").fadeOut();
+	$("#frieds_top_list .loading-img").remove();
 	$("#frieds_top_list p").text("내 게시글에 댓글과 좋아요를 남김 친구들중 상위 " + num + 
 		"명의 목록입니다.(분석시간: " + elapsed_time + ")");
 
@@ -185,7 +185,7 @@ function show_top_friends(arr, num, elapsed_time)
 		var like_num = arr[key]['like_num'];
 		var fb_url = arr[key]['fb_url'];
 
-		$("#foo").append('<a href="' + fb_url + '" target="_blank"><img id="image_' + i + '"src="'+ pic_url + '" /></a>');
+		$("#friend-photos").append('<a href="' + fb_url + '" target="_blank"><img id="image_' + i + '"src="'+ pic_url + '" /></a>');
 		$("#image_" + i).attr("data-original-title", name + 
 			" / 댓글 " + comment_num + "개 / 좋아요 " + like_num + "개");
 		$("#image_" + i).attr("class", "img-rounded");

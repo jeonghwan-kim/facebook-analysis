@@ -1,9 +1,5 @@
 body {
 	font-family:  "Trebuchet MS", Helvetica, sans-serif;
-	/*background-position: center top;
-	text-align: center;
-	background-color: rgb(53,53,53);
-	color: white;*/
 }
 h1 {
 	font-family:  "Trebuchet MS", Helvetica, sans-serif;
@@ -26,13 +22,10 @@ p {
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
-.name {
-	margin: 10px 0;
-	text-align: right;
-}
-.logout {
-	margin: 10px 0;
-	text-align: left;
+.user-info {
+	margin: 10px 10px 10px 0;
+	/*text-align: left;*/
+	float: right;
 }
 
 
@@ -77,6 +70,7 @@ p {
 
 .start_page {
 	padding-top: 50px;
+	text-align: center;
 }
 
 .stress {
@@ -93,4 +87,32 @@ p {
 #frieds_top_list img {
 	margin-right: 10px;
 	margin-bottom: 10px;
+}
+
+
+/* 분석 결과 화면 */
+
+.the-box {
+	background-color: #eee;
+	box-shadow: 1px 1px 2px #999;
+	margin-bottom: 20px;
+}
+.subtitle{
+	background-color: #5bb75b;
+	color: white;
+}
+.descrip{
+	padding-top: 10px;	
+	padding-bottom: 10px;	
+}
+.loading-img {
+	text-align: center;
+	padding: 0 0 30px 0;
+}
+.subtitle, .descrip, .result {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.result {
+	padding-bottom: 20px;
 }
