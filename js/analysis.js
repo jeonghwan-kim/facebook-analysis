@@ -138,7 +138,7 @@ function draw_chart_time(chart_div, arr, elapsed_time) {
 function draw_chart_close(chart_div, arr, num, elapsed_time) {
 	$("#frieds_activity .loading-img").remove();
 	$("#frieds_activity p").text("내 게시글에 댓글이나 좋아요를 남긴 " + num + 
-		"명의 친구들을 분석한 결과입니다.(분석시간: " + elapsed_time+ "초)");
+		"명의 친구들을 분석한 결과입니다. (분석시간: " + elapsed_time+ "초)");
 
 	var data = new google.visualization.DataTable();
 	data.addColumn('string', 'friend');
@@ -185,11 +185,13 @@ function show_top_friends(arr, num, elapsed_time)
 		var like_num = arr[key]['like_num'];
 		var fb_url = arr[key]['fb_url'];
 
-		$("#friend-photos").append('<a href="' + fb_url + '" target="_blank"><img id="image_' + i + '"src="'+ pic_url + '" /></a>');
-		$("#image_" + i).attr("data-original-title", name + 
-			" / 댓글 " + comment_num + "개 / 좋아요 " + like_num + "개");
+		$("#friend-photos").append('<img id="image_' + i + '" src="'+ pic_url + '" />');
 		$("#image_" + i).attr("class", "img-rounded");
-		$("#image_" + i).tooltip();
+		$("#image_" + i).attr("data-toggle", "popover"); 
+		$("#image_" + i).attr("data-placement", "top"); 
+		$("#image_" + i).attr("data-title", name); 
+		$("#image_" + i).attr("data-content", "댓글 " + comment_num + "개, 좋아요 " + like_num + "개"); 
+		$("#image_" + i).popover();
 		i++;
 	}
 

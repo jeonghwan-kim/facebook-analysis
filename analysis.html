@@ -11,31 +11,6 @@
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/jqcloud.css" rel="stylesheet">
-    <style type="text/css">
-      @media (min-width: 979px) {
-        body {
-          padding-top: 60px;
-        }
-      }
-      @media (max-width: 979px) {
-        .navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
-          padding: 0px;
-        }
-      }
-      @media (max-width: 767px) {
-        .user-info {
-          float:left;
-        }
-        body {
-          padding-left:5px;
-          padding-right:5px;
-        }
-        .navbar-fixed-top {
-          margin-left: 0;
-          margin-right: 0;  
-        }
-      }
-    </style>
   </head>
 
   <body>
@@ -44,7 +19,7 @@
     <div class=" navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
-          <div class="row-fluid">
+          <div class="row-fluid my-container">
             <div class="span9 title">
               <div class="title1">Facebook 분석기</div>
             </div>
@@ -60,7 +35,7 @@
     </div>
 
     <!-- 결과화면 -->
-    <div class="container-fluid">
+    <div class="container-fluid my-container">
       <div class="row-fluid">
         <div id="word_cloud_outer" class="span6 the-box">
           <div class="subtitle">키워드</div>
@@ -96,7 +71,7 @@
 
     </div> <!-- containter -->
 
-    <footer class="email_footer bg_white">
+    <footer class="email_footer">
       <p>만든이: <a href="mailto:ej88ej@gmail.com">ej88ej@gmail.com</a></p>
     </footer>
 

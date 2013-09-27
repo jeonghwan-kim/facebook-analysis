@@ -1,5 +1,6 @@
 body {
 	font-family:  "Trebuchet MS", Helvetica, sans-serif;
+	background-color: #ddd;
 }
 h1 {
 	font-family:  "Trebuchet MS", Helvetica, sans-serif;
@@ -89,15 +90,16 @@ p {
 }
 
 #frieds_top_list img {
-	margin-right: 10px;
-	margin-bottom: 10px;
+	margin-left: 4px;
+	margin-right: 4px;
+	margin-bottom: 8px;
 }
 
 
 /* 분석 결과 화면 */
 
 .the-box {
-	background-color: #eee;
+	background-color: #fff;
 	box-shadow: 1px 1px 2px #999;
 	margin-bottom: 20px;
 }
@@ -119,4 +121,52 @@ p {
 }
 .result {
 	padding-bottom: 20px;
+}
+
+
+/* Responsive Style */
+
+@media (min-width: 979px) {
+	body {
+	  padding-top: 60px;
+	}
+}
+
+@media (max-width: 979px) {
+	.navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
+	  padding: 0px;
+	}
+}
+
+@media (max-width: 767px) {
+	.user-info {
+	  float:left;
+	}
+	body {
+	  padding-left:0px;
+	  padding-right:0px;
+	}
+	.navbar-fixed-top {
+	  margin-left: 0;
+	  margin-right: 0;  
+	}
+	.my-container {
+		padding-left:8px;
+		padding-right:8px;
+	}
+	#frieds_top_list .result img {
+		width: 14.66%;
+		margin-left: 1%;
+		margin-right: 1%;
+		margin-bottom: 7px;
+	}
+}
+
+@media (max-width: 480px) {
+	#frieds_top_list .result img {
+		width: 23%;
+		margin-left: 1%;
+		margin-right: 1%;
+		margin-bottom: 7px;
+	}
 }

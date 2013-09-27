@@ -10,7 +10,7 @@
 header('Content-type: application/json');
 require '../facebook/facebook.php';
 require '../facebook/key-info.php';
-define('FRIENDS_NUM', 42); // 분석결과 상위 친구
+define('FRIENDS_NUM', 20); // 분석결과 상위 친구
 // define('SINCE_DATE', '2013-07-01'); // 조회 날짜 기간
 session_start();
 
