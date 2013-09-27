@@ -24,7 +24,6 @@ p {
 }
 .user-info {
 	margin: 10px 10px 10px 0;
-	/*text-align: left;*/
 	float: right;
 }
 
@@ -71,6 +70,11 @@ p {
 .start_page {
 	padding-top: 50px;
 	text-align: center;
+}
+.start_page h1 {
+	/*width: 300px;*/
+	/*white-space: normal;*/
+	word-wrap: keep-all;
 }
 
 .stress {
